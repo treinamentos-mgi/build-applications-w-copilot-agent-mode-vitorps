@@ -43,13 +43,13 @@ flowchart LR
 
 ## Decisões de implementação
 
-- **Camada de apresentação:** substituir os componentes provisórios por telas que usem o cliente compartilhado em `frontend/src/api/client.ts` e apresentem dados, carregamento, estado vazio e erro em português, com anúncios acessíveis.
-- **Camada de lógica:** manter as rotas como encaminhadoras e concentrar validações de entrada e regras de negócio nos serviços. Retornar 4xx intencionais para entradas inválidas, sem expor erros de conversão como 500.
-- **Camada de dados:** completar os schemas Mongoose com os campos obrigatórios e tipos esperados pelos contratos. Manter `members` como lista vazia por padrão e preservar o seed idempotente, sem apagar coleções nem perder associações de equipes.
-- **Registro de atividades:** validar IDs e existência das referências antes de criar a atividade; calcular pontos com base nos minutos e registrar a data de ocorrência no serviço.
-- **Gerenciamento de equipes:** rejeitar equipes sem nome e manter nome, mascote e integrantes enviados tanto na criação quanto na listagem.
-- **Placar:** somar os pontos das atividades por equipe, ordenar do maior total para o menor e numerar as posições a partir de 1.
-- **Sugestões de treino:** localizar a pessoa pelo e-mail, considerar a meta e as atividades recentes para escolher o foco, explicar a recomendação em português e retornar 4xx quando a pessoa não existir.
+- Decisão da camada de apresentação: substituir os componentes provisórios por telas que usem o cliente compartilhado em `frontend/src/api/client.ts` e apresentem dados, carregamento, estado vazio e erro em português, com anúncios acessíveis.
+- Decisão da camada de lógica: manter as rotas como encaminhadoras e concentrar validações de entrada e regras de negócio nos serviços. Retornar 4xx intencionais para entradas inválidas, sem expor erros de conversão como 500.
+- Decisão da camada de dados: completar os schemas Mongoose com os campos obrigatórios e tipos esperados pelos contratos. Manter `members` como lista vazia por padrão e preservar o seed idempotente, sem apagar coleções nem perder associações de equipes.
+- Abordagem para registro de atividades: validar IDs e existência das referências antes de criar a atividade; calcular pontos com base nos minutos e registrar a data de ocorrência no serviço.
+- Abordagem para gerenciamento de equipes: rejeitar equipes sem nome e manter nome, mascote e integrantes enviados tanto na criação quanto na listagem.
+- Abordagem para o placar: somar os pontos das atividades por equipe, ordenar do maior total para o menor e numerar as posições a partir de 1.
+- Abordagem para sugestões de treino: localizar a pessoa pelo e-mail, considerar a meta e as atividades recentes para escolher o foco, explicar a recomendação em português e retornar 4xx quando a pessoa não existir.
 - **Ordem de implementação:** modelos e persistência; serviços e contratos da API; integração e estados da interface. Executar os testes da camada alterada antes de avançar para a seguinte.
 
 ## Plano de testes
