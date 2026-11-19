@@ -59,3 +59,4 @@ flowchart LR
 - **Frontend:** `npm test --prefix octofit-tracker/frontend`. Verifica dados exibidos, solicitação de sugestão para a pessoa esperada e estados acessíveis de carregamento, vazio e erro nas quatro rotas. Linha de base: 15 falhas, cobrindo esses comportamentos.
 - **Compilação do backend:** `npm run build --prefix octofit-tracker/backend`, após implementar os serviços e antes de concluir a camada de lógica.
 - **Compilação do frontend:** `npm run build --prefix octofit-tracker/frontend`, após integrar as telas e como verificação final.
+.
